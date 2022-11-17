@@ -3,19 +3,25 @@ package ds.linkedlist.concepts;
 public class CLL implements LinkedList {
 
 	@Override
-	public void insertElementAtBegining() {
+	public void insertFirstElement(Node new_node) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void insertElementAtEnd() {
+	public void insertElementAtBegining(Node new_node) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void insertElementInMiddle(int pos) {
+	public void insertElementAtEnd(Node new_node) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertElementInMiddle(int pos, Node new_node) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
@@ -48,6 +54,4 @@ public class CLL implements LinkedList {
 	public void print() {
 		// TODO Auto-generated method stub
 		
-	}
-
-}
+	}}
