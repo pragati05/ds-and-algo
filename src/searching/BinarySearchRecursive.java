@@ -11,9 +11,7 @@ public class BinarySearchRecursive {
 		int searchElement = 50;
 		
 		int index = binarySearch(input, left, right, searchElement);
-		System.out.println(index);
-
-			
+		System.out.println(index);		
 		
 
 	}

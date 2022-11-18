@@ -12,9 +12,16 @@ public class BinarySearchRecursiveOnRotateArray {
 		
 		int index = binarySearch(input, left, right, searchElement);
 		System.out.println(index);
-
-			
 		
+		input = new int[] {10, 13, 1, 2, 3, 5, 8};
+		System.out.println(binarySearch(input, 0, input.length-1, 5));
+		System.out.println(binarySearch(input, 0, input.length-1, 13));
+		System.out.println(binarySearch(input, 0, input.length-1, 21));
+			
+		input = new int[] {11, 12, 13, 15, 18, 1, 3, 5};
+		System.out.println(binarySearch(input, 0, input.length-1, 13));
+		System.out.println(binarySearch(input, 0, input.length-1, 5));
+		System.out.println(binarySearch(input, 0, input.length-1, 0));
 
 	}
 	
