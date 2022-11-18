@@ -20,28 +20,37 @@ public static void main(String[] args) {
 	head.next.next.next = r.new Node(4);
 	head.next.next.next.next = null;
 	
-	reverseSLL(head);
+	printLL(head);
+	head = reverseSLL(head);
+	printLL(head);
 }
 
-private static void reverseSLL(Node head) {
-	
-	Node prev = null;
-	Node curr = head;
-	Node next = head;
-	
-	while(next!=null) {
-		prev = curr;
-		curr = next;
-		next = curr.next;
-		curr.next = prev;
-		
-	}
-	
-	head = curr;
+static void printLL(Node head) {
 	Node temp = head;
-	while(temp.next!=null) {
-		System.out.println(temp.data + "->");
+	while(temp!=null) {
+		System.out.print(temp.data+"->");
 		temp = temp.next;
 	}
+	System.out.println();
+}
+private static Node reverseSLL(Node head) {
+	if(head == null) {
+		return null;
+	}
+	Node left = null;
+	Node curr = head;
+	Node right = head.next;
+	
+	while(true) {
+		curr.next = left;
+		
+		
+		left = curr;
+		curr = right;
+		if(curr == null)
+				break;
+		right = right.next;
+	}
+	return left;
 }
 }
