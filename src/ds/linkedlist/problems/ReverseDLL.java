@@ -1,7 +1,5 @@
 package ds.linkedlist.problems;
 
-import ds.linkedlist.problems.ReverseSLL.Node;
-
 public class ReverseDLL {
 	
 	class Node {
