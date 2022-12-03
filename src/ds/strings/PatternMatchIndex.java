@@ -1,4 +1,4 @@
-package ds.arrays;
+package ds.strings;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

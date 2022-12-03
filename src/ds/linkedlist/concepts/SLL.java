@@ -1,5 +1,7 @@
 package ds.linkedlist.concepts;
 
+import java.util.HashMap;
+
 class SLLNode extends Node{
 	
 	SLLNode(int data){
@@ -11,20 +13,24 @@ class SLLNode extends Node{
 		return "<SLLNode ["+ data + "]>";
 	}
 	
+	
 }
 
 
 public class SLL implements LinkedList {
-	Node HEAD = null;
-	Node TAIL = null;
+	 Node HEAD = null;
+	 Node TAIL = null;
 
+	 HashMap<> hm = new HashMap<>();
+	 
 
 	@Override
 	public Node deleteElementAtBegining() {
 		Node deleted_node = null;
 		
+		hm.
 		if(this.HEAD==null) {
-			System.out.println("List is empty");
+			System.out.println("Cannot delete because list is empty");
 		}else {
 			deleted_node = this.HEAD;
 			this.HEAD = this.HEAD.next;
@@ -85,6 +91,7 @@ public class SLL implements LinkedList {
 		return deleted_node;
 	}
 
+	
 	@Override
 	public int getSize() {
 		int size = 0;
@@ -131,7 +138,8 @@ public class SLL implements LinkedList {
 	@Override
 	public void insertElementAtBegining(Node new_node) throws Exception {
 		if(this.HEAD == null) {
-			throw new Exception("Linked list is empty");
+			insertFirstElement(new_node);
+			return;
 		}
 		new_node.next = this.HEAD;
 		this.HEAD = new_node;
@@ -141,7 +149,8 @@ public class SLL implements LinkedList {
 	@Override
 	public void insertElementAtEnd(Node new_node) throws Exception  {
 		if(this.HEAD == null) {
-			throw new Exception("Linked list is empty");
+			insertFirstElement(new_node);
+			return;
 		}
 	 this.TAIL.next = new_node;
      this.TAIL = new_node ;
@@ -177,6 +186,16 @@ public class SLL implements LinkedList {
 	
 	
 	
+	public Node getHEAD() {
+		return HEAD;
+	}
+
+
+	public Node getTAIL() {
+		return TAIL;
+	}
+
+
 	public static void main(String[] args) throws Exception {
 		SLL sll = new SLL();
 		
