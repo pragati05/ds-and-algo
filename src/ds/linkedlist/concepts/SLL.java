@@ -21,14 +21,14 @@ public class SLL implements LinkedList {
 	 Node HEAD = null;
 	 Node TAIL = null;
 
-	 HashMap<> hm = new HashMap<>();
+	
 	 
 
 	@Override
 	public Node deleteElementAtBegining() {
 		Node deleted_node = null;
 		
-		hm.
+	
 		if(this.HEAD==null) {
 			System.out.println("Cannot delete because list is empty");
 		}else {

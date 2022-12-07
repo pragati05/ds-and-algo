@@ -5,7 +5,7 @@ import java.util.List;
 public class SyncClass { 
 	
 	public void test() {
-		List<String> stringList = new ArrayList();
+		List<String> stringList = new ArrayList<>();
 		stringList.add("Star");
 		stringList.add("Moon");
 		

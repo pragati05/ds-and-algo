@@ -1,8 +1,20 @@
-package ds.linkedlist.problems;
+package ds.arrays;
 
-public class SumOfNumberUsingLinkedList {
+import java.util.ArrayList;
 
-	public class Node {
+import ds.linkedlist.problems.SumOfNumberUsingLinkedList;
+import ds.linkedlist.problems.SumOfNumberUsingLinkedList.Node;
+
+import java.util.*;
+
+/**
+ * Input = [1, 2, 3]; Output = [1, 2, 4]
+ * 
+ * @author pragati
+ *
+ */
+public class AddOneToNumberUsingLL {
+	class Node {
 		int data;
 		Node next = null;
 
@@ -79,7 +91,7 @@ public class SumOfNumberUsingLinkedList {
 			temp.next = new Node(data);
 		}
 
-		return head;
+		
 	}
 
 	// summ of 2 linked list
@@ -157,48 +169,18 @@ public class SumOfNumberUsingLinkedList {
 		}
 		return head;
 	}
-
+	public ArrayList<Integer> plusOne(ArrayList<Integer> A) {
+		
+		List<Integer> ll = new LinkedList<>(A);
+		List<Integer> oneNumberList = new LinkedList<>(Arrays.asList(1));
+		
+		ll.
+		
+		return null;
+	}
 	public static void main(String[] args) {
-		SumOfNumberUsingLinkedList r = new SumOfNumberUsingLinkedList();
+		// TODO Auto-generated method stub
 
-		
-		Node n1 = r.convertNumberToLinkedList("1645873221456");
-		Node n2 = r.convertNumberToLinkedList("90986953578998799");
-		Node result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("90988599452220255"));
-		System.out.println(r.print(result));
-		
-		n1 = r.convertNumberToLinkedList("1");
-		n2 = r.convertNumberToLinkedList("5");
-		result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("6"));
-		System.out.println(r.print(result));
-		
-		n1 = r.convertNumberToLinkedList("9");
-		n2 = r.convertNumberToLinkedList("9");
-		result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("18"));
-		System.out.println(r.print(result));
-		
-		n1 = r.convertNumberToLinkedList("0");
-		n2 = r.convertNumberToLinkedList("0");
-		result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("0"));
-		System.out.println(r.print(result));
-		
-		n1 = r.convertNumberToLinkedList("11111");
-		n2 = r.convertNumberToLinkedList("55");
-		result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("11166"));
-		System.out.println(r.print(result));
-		
-		n1 = r.convertNumberToLinkedList("25");
-		n2 = r.convertNumberToLinkedList("100000");
-		result = r.addNumbers(n1, n2);
-		assert r.print(result) == r.print(r.convertNumberToLinkedList("100025"));
-		System.out.println(r.print(result));
-		
-		System.out.println("All Test cases passed");
 	}
 
 }
