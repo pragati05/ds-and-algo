@@ -1,5 +1,8 @@
 package ds.trees;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class TreeTraversals {
 	class Node {
 		int data;
@@ -42,6 +45,27 @@ public class TreeTraversals {
 		System.out.print(n.data + "->");
 	}
 
+	public static void levelOrder(Node root) {
+		
+		Queue<Node> q = new ArrayDeque<>();
+		q.add(root);
+		Node temp;
+		while(!q.isEmpty()) {
+			temp = q.poll();
+			System.out.print(temp.data + "->");
+			
+			if(temp.left !=null) {
+				q.add(temp.left);
+			}
+			if(temp.right != null) {
+				q.add(temp.right);
+			}
+		}
+		
+	}
+	
+	
+
 	public static void main(String[] args) {
 		TreeTraversals t = new TreeTraversals();
 		Node root = t.new Node(1);
@@ -64,6 +88,9 @@ public class TreeTraversals {
 
 		System.out.println("\n*** POST-ORDER *****");
 		t.postorder(root);
+		
+		System.out.println("\n*** Level-ORDER *****");
+		t.levelOrder(root);
 
 	}
 
